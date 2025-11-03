@@ -41,10 +41,10 @@ console.log(calculateBMI(57, 1.75)); // "BMI: 22.86 - Phân loại: Bình thư�
 // }
 function createBook(title, author, year, price) {
   const book = {
-    title: `${title}`,
-    author: `${author}`,
-    year: `${year}`,
-    price: `${price}`,
+    title: title,
+    author: author,
+    year: year,
+    price: price,
     getBookInfo() {
       return `Sách: ${this.title} Tác giả: ${this.author} Năm: ${this.year} Giá: ${this.price} vnd`;
     },
