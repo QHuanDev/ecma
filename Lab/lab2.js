@@ -5,6 +5,7 @@ for (let i = 0; i < 3; i++) {
   }, 100);
 }
 // Yêu cầu: Sửa để in ra 0,1,2
+// =================================================================
 
 // Bai 2 ================
 // Tạo một object student với const
@@ -21,6 +22,7 @@ student.grade = "A";
 student.age = 21;
 // 3. In ra toàn bộ thông tin student
 console.log(student);
+// =================================================================
 
 // Tạo template cho email thông báo
 const user = {
@@ -37,6 +39,7 @@ Bạn vừa mua ${user.product} với giá ${user.price}vnđ
 ngày: ${user.orderDate}`; // Viết template ở đây
 
 console.log(emailTemplate);
+// =================================================================
 
 // Tạo HTML template cho card sản phẩm
 const product = {
@@ -58,3 +61,36 @@ chỉ còn: ${product.inStock} sản phẩm
 `; // Viết template ở đây
 
 console.log(productCard);
+// =================================================================
+
+// Viết lại object sau sử dụng ES6 enhanced object literals
+const width = 100;
+const height = 200;
+const color = "red";
+
+const rectangle = {
+  width,
+  height,
+  color,
+  calculateArea: function () {
+    return this.width * this.height;
+  },
+  describe: function () {
+    return `Rectangle ${this.width}x${this.height}, color: ${this.color}`;
+  },
+};
+
+// =================================================================
+// Tạo object configuration với computed property names
+const env = "production";
+const version = "v2";
+const features = ["auth", "payment", "notification"];
+
+// Tạo object config với:
+// - key: `api_${env}_${version}`
+// - key cho từng feature: `feature_${featureName}`
+// - method: `get${env}Config()`
+
+const config = {
+  // Viết code ở đây
+};
