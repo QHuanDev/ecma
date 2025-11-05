@@ -49,6 +49,8 @@ function createBook(title, author, year, price) {
       return `Sách: ${this.title} Tác giả: ${this.author} Năm: ${this.year} Giá: ${this.price} vnd`;
     },
     calculateDiscount(discount) {
+      if (discount < 1 || discount > 100)
+        return "Bạn chỉ được nhập giảm giá từ 1%-100%";
       return `Giảm ${discount} %`;
     },
   };
