@@ -62,6 +62,7 @@ function fetchMultipleData(urls) {
   return Promise.all(urls.map((url) => fetch(url).then((res) => res.json())));
 }
 
-fetchMultipleData(["/api/user/1", "/api/user/2"]).then((users) =>
-  console.log(users)
-);
+fetchMultipleData([
+  "https://jsonplaceholder.typicode.com/users/1",
+  "https://jsonplaceholder.typicode.com/users/2",
+]).then((users) => console.log(users));
