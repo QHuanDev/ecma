@@ -66,3 +66,21 @@ fetchMultipleData([
   "https://jsonplaceholder.typicode.com/users/1",
   "https://jsonplaceholder.typicode.com/users/2",
 ]).then((users) => console.log(users));
+
+processOrder = async (orderId, callback) => {
+  try {
+    const res = await fetch(
+      `https://jsonplaceholder.typicode.com/posts/${orderId}`
+    );
+    const posts = await res.json();
+    const userId = await posts.userId;
+    const product = await posts.title;
+    callback(posts, userId, product);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+processOrder(1, (posts, userId, product) => {
+  console.log(posts, userId, product);
+});
