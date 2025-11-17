@@ -49,8 +49,8 @@ const TourList = () => {
       </h2>
 
       <div className="grid grid-cols-4 gap-6">
-        {tours.map((tour) => (
-          <Card data={tour} />
+        {tours.map((tour, index) => (
+          <Card key={index} data={tour} />
         ))}
       </div>
     </div>

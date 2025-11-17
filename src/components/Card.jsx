@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = (data) => {
+const Card = ({ data }) => {
   return (
     <div
       key={data.id}
