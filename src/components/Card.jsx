@@ -21,8 +21,8 @@ const Card = ({ data }) => {
           <span className="text-lg font-bold text-emerald-600">
             {data.price}
           </span>
-          <Button props="Mua ngay" />
-          <Button props="Xem chi tiết" />
+          <Button>Mua ngay</Button>
+          <Button>Xem chi tiết</Button>
         </div>
       </div>
     </div>
