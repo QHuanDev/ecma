@@ -1,17 +1,16 @@
 import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Banner from "./components/Banner";
-import TourList from "./components/TourList";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Banner />
-      <TourList />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 export default App;

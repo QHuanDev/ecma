@@ -15,7 +15,7 @@ const Header = () => {
 
         <nav className="hidden md:flex space-x-14">
           <a
-            href=""
+            href="/"
             className="text-gray-700 hover:text-blue-600 transition duration-300 ease-in-out transform hover:scale-105"
           >
             Trang chủ
@@ -27,7 +27,7 @@ const Header = () => {
             Tour
           </a>
           <a
-            href="#"
+            href="/about"
             className="text-gray-700 hover:text-blue-600 transition duration-300 ease-in-out transform hover:scale-105"
           >
             Giới thiệu
